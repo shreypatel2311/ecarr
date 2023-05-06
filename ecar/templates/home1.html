@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href= "{% static './assets/page2/style.css' %}" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">  
+    
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/animate.min.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/bootstrap-submenu.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/fonts/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/fonts/linearicons/style.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/jquery.mCustomScrollbar.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/dropzone.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/slick.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/lightbox.min.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/jnoty.css' %}">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static './assets/index/css/skins/red.css' %}">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{% static './assets/index/img/favicon.ico' %}" type="image/x-icon" >
+
+    <!-- Google fonts -->
+	<!-- Log on to codeastro.com for more projects -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/ie10-viewport-bug-workaround.css' %}">
+
+    <script  src="{% static './assets/index/js/ie-emulation-modes-warning.js' %}"></script>
+
+    <script src="{% static './assets/index/js/jquery-2.2.0.min.js' %}"></script>
+    <script src="{% static './assets/index/js/popper.min.js' %}"></script>
+    <script src="{% static './assets/index/js/bootstrap.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/bootstrap-submenu.js' %}"></script>
+    <script  src="{% static './assets/index/js/rangeslider.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.mb.YTPlayer.js' %}"></script>
+    <script  src="{% static './assets/index/js/bootstrap-select.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.easing.1.3.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.scrollUp.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/dropzone.js' %}"></script>
+    <script  src="{% static './assets/index/js/slick.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.filterizr.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.magnific-popup.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.countdown.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.mousewheel.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/lightgallery-all.js' %}"></script>
+    <script  src="{% static './assets/index/js/jnoty.js' %}"></script>
+    <script  src="{% static './assets/index/js/app.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        {% include "navbar.html" %}
+    </header>
+
+    <main>
+        <section>
+            <div class="top-container">
+                <aside>
+                    
+                </aside>
+            </div>
+        </section>
+
+        <section>
+                <!-- Featured car start -->
+        <div class="featured-car content-area-5">
+            <div class="container">
+                <!-- Main title -->
+                <div class="main-title">
+                    <h1>Featured <span>Cars</span></h1>
+                    <p>Amongst many of our available cars, here are some few picks that you might have an interest in.</p>
+                </div>
+                <!-- Slick slider area start -->
+                <div class="slick-slider-area clearfix">
+                    <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                    {% for car in featured_cars %} 
+                        <div class="slick-slide-item">
+                            <div class="car-box-3">
+                                <div class="car-thumbnail">
+                                    <a href="{% url 'car_detail' car.id %}" class="car-img">
+                                        <div class="tag-2">Featured</div>
+                                        <div class="price-box">
+                                            <span>Rs. {{car.price}}  Lacs</span>  
+                                        </div>
+                                        <img class="d-block w-100" src="{{car.image1.url}}" alt="car" style="min-height: 262px; max-height: 262px;">
+                                    </a>
+                                    <div class="carbox-overlap-wrapper">
+                                        <div class="overlap-box">
+                                            <div class="overlap-btns-area">
+                                                <div class="car-magnify-gallery">
+                                                    <a href="{{car.image1.url}}" class="overlap-btn">
+                                                        <i class="fa fa-expand"></i>
+                                                        <img class="hidden" src="{{car.image1.url}}">
+                                                    </a>
+                                                    {% if car.image1 %}
+                                                    <a href="{{car.image2.url}}" class="hidden">
+                                                        <img class="hidden" src="{{car.image2.url}}">
+                                                    </a>
+                                                    {% endif %}
+                                                    {% if car.image2 %}
+                                                    <a href="{{car.image3.url}}" class="hidden">
+                                                        <img class="hidden" src="{{car.image3.url}}">
+                                                    </a>
+                                                    {% endif %}
+                                                    {% if car.car_photo_3 %}
+                                                    <a href="{{car.car_photo_3.url}}" class="hidden">
+                                                        <img class="hidden" src="{{car.car_photo_3.url}}">
+                                                    </a>
+                                                    {% endif %}
+                                                    {% if car.car_photo_4 %}
+                                                    <a href="{{car.car_photo_4.url}}" class="hidden">
+                                                        <img class="hidden" src="{{car.car_photo_4.url}}">
+                                                    </a>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <h1 class="title">
+                                        <a href="{% url 'car_detail' car.id %}">{{ car.carvarient }}</a>
+                                    </h1>
+                                    
+                                    <ul class="facilities-list clearfix">
+                                        <li>{{car.fuel.FuelType}}</li>
+                                        <li>{{car.Engine.Transmission_Type }}</li>
+                                        <li>{{car.fuel.TopSpeed}}</li>
+                                        <li>{{car.cartype}}</li>
+                                        <li>{{car.year}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    </div>
+                    <div class="slick-btn">
+                        <div class="slick-prev slick-arrow-buton sab-4" >
+                            <i class="fa fa-angle-left"></i>
+                        </div>
+                        <div class="slick-next slick-arrow-buton sab-3" >
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Featured car end -->
+    </section>
+
+    <section>
+            <!-- Rent car start -->
+<div class="featured-car content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Latest <span>Cars</span></h1>
+            <p></p>
+        </div>
+        <div class="row">
+          {% for car in all_cars|slice:":6" %}
+            <div class="col-lg-4 col-md-6">
+                <div class="car-box">
+                    <div class="car-thumbnail">
+                        <a href="{% url 'car_detail' car.id %}" class="car-img">
+                            <div class="tag">For Sale</div>
+                            <img class="d-block w-100" src="{{car.image1.url}}" alt="car" style="min-height: 262px; max-height: 262px;">
+                            <div class="facilities-list clearfix">
+                                <ul>
+                                    <li>
+                                        <span><i class="flaticon-way"></i></span>{{car.miles}} mi
+                                    </li>
+                                    <li>
+                                        <span><i class="flaticon-calendar-1"></i></span>{{car.year}}
+                                    </li>
+                                    <li>
+                                        <span><i class="flaticon-manual-transmission"></i></span>{{car.transmission}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <div class="carbox-overlap-wrapper">
+                            <div class="overlap-box">
+                                <div class="overlap-btns-area">
+                                    <div class="car-magnify-gallery">
+                                        <a href="{{car.image1.url}}" class="overlap-btn">
+                                            <i class="fa fa-expand"></i>
+                                            <img class="hidden" src="{{car.image1.url}}">
+                                        </a>
+                                        {% if car.image2 %}
+                                        <a href="{{car.image2.url}}" class="hidden">
+                                            <img class="hidden" src="{{car.image2.url}}">
+                                        </a>
+                                        {% endif %}
+                                        {% if car.image3 %}
+                                        <a href="{{car.image3.url}}" class="hidden">
+                                            <img class="hidden" src="{{car.image3.url}}">
+                                        </a>
+                                        {% endif %}
+                                        {% if car.car_photo_3 %}
+                                        <a href="{{car.car_photo_3.url}}" class="hidden">
+                                            <img class="hidden" src="{{car.car_photo_3.url}}">
+                                        </a>
+                                        {% endif %}
+                                        {% if car.car_photo_4 %}
+                                        <a href="{{car.car_photo_4.url}}" class="hidden">
+                                            <img class="hidden" src="{{car.car_photo_4.url}}">
+                                        </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <h1 class="title">
+                            <a href="{% url 'car_detail' car.id %}">{{car.name}}</a>
+                        </h1>
+                    </div>
+                    <div class="footer clearfix">
+                        <div class="pull-left ratings days">
+                            <p class="cartype">{{car.cartype}}</p>
+                        </div>
+                        <div class="pull-right">
+                            <p class="price">Rs. {{car.price}} Lacs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!-- Log on to codeastro.com for more projects -->
+          {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!-- Rent car end -->
+    </section>
+
+    </main>
+</body>
+</html>

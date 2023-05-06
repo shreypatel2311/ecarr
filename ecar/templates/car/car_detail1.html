@@ -1,0 +1,61 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href= "{% static './assets/page/style.css' %}" >
+    
+    <title>Document</title>
+</head>
+<body>
+    {% include "navbar.html" %}
+    <main>
+        <div>
+            <img  src="https://tpc.googlesyndication.com/simgad/12034953364635315369" border="0" width="100%"  alt="">
+        </div>
+    <section>
+        <div>
+            <div>
+                <!-- <h2 id="h1">{{car_detail.name}}</h2> -->
+                <h2 id="h1">{{car_detail.name}}</h2>
+
+            </div>
+            <div>
+                <ul>
+                    <li>OverView</li>
+                    <li>Key Specification</li>
+                    <li>Comfort</li>
+                    <li>Color</li>
+                </ul>
+            </div>
+            
+            <div class="img-container">
+                <div class="img">
+                    <img src="{{car_detail.image2.url}}" alt="">
+                </div>
+
+                <div>
+                    <div class="content-text-1">
+                        <h1 class="content-text-p">Price :-</h1>
+                        <p>Rs. {{car_detail.price}} lacs</p>
+                    </div>
+
+                    <div class="content-text">
+                        <h3 class="header-text">Varient</h3>
+                        <p>{{car_detail.carvarient}}</p>
+                    </div>
+
+                    <div class="content-text">
+                        <h3 class="header-text">Fuel Type</h3>
+                        <p>{{car_detail.fuel.FuelType}}</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+</body>
+</html>
+

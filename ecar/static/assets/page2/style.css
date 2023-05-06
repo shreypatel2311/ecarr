@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top-container{
+    height: 70vh;
+    background-image: url(https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1800&q=60);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 20px 20px 0 ;
+    margin: 0 5px;
+    
+
+}

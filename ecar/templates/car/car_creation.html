@@ -1,0 +1,261 @@
+<!-- <form method ="POST">
+    {% csrf_token %}
+ 
+    {{form.as_p}}
+    
+    <input type="submit" value="Submit">
+</form>  -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  	<meta charset="UTF-8">
+  	<title></title>
+  	<!-- <link rel="stylesheet" href="{% static './assets/admin_table/dist/style.css' %}"> -->
+	<!-- Add File -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <style>
+
+        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+        *, *:before, *:after {
+        box-sizing: border-box;
+        }
+
+        body {
+        padding: 24px;
+        font-family: "Source Sans Pro", sans-serif;
+        margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        }
+
+        .img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        .img:hover {
+        box-shadow: 0 0 2px 1px rgba(31, 3, 212, 0.5);
+        }
+
+        .container {
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 25vh;
+        }
+
+        .table {
+        width: 100%;
+        border: 1px solid #EEEEEE;
+        }
+
+        .table-header {
+        display: flex;
+        width: 100%;
+        background:#1C1E32;
+        padding: 18px 0;
+        }
+
+        .table-row {
+        display: flex;
+        width: 100%;
+        padding: 18px 0;
+        color: #1C1E32;
+        }
+
+
+        .icon-data {
+        
+        color:#000;
+        display: block;
+        padding: 6px 12px 6px 12px;
+        text-align:center;
+
+        }
+
+        .table-row:nth-of-type(odd) {
+        background: #EEEEEE;
+        }
+
+
+        .table-data, .header__item {
+        flex: 1 1 20%;
+        text-align: center;
+        }
+
+        .header__item {
+        text-transform: uppercase;
+        }
+
+        .filter__link {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        padding-left: 24px;
+        padding-right: 24px;
+        }
+        .filter__link::after {
+        content: "";
+        position: absolute;
+        right: -18px;
+        color: white;
+        font-size: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        }
+        .filter__link.desc::after {
+        content: "(desc)";
+        }
+        .filter__link.asc::after {
+        content: "(asc)";
+        }
+    </STYle>
+</head>
+<body>
+	{% include "navbar.html" %}
+  	<!-- partial:index.partial.html -->
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	
+	<div class="container">
+		<div class="table">
+			<div class="table-header">
+				<div class="header__item"><a href="#">Title</a></div>
+				<div class="header__item"><a href="#">Data</a></div>
+				<div class="header__item"><a href="#">Action</a></div>
+			</div>
+			
+			<div class="table-content">	
+				<div class="table-row">		
+					<div class="table-data">Name</div>
+					<div class="table-data"> {{form.name}} </div>
+					<div class="table-data"></div>
+				</div>
+
+				<div class="table-row">
+					<div class="table-data">price</div>
+					<div class="table-data">{{form.price}}</div>
+					<div class="table-data">None</div>
+				</div>
+
+				<div class="table-row">
+					<div class="table-data">CarType</div>
+					<div class="table-data">{{form.cartype}}</div>
+					<div class="table-data">
+                        <button type="button">
+                            <a class="icon-data" href="{% url 'cartype_creation' %}"><i class="bi bi-pencil-fill"></i> Create </a>
+                        </button>
+					</div>
+				</div>
+				
+				<div class="table-row">
+					<div class="table-data">Brand</div>
+					<div class="table-data">{{form.brand}}</div>
+					<div class="table-data">
+                        <a class="icon-data" href="{% url 'brand_creation' %}"><i class="bi bi-pencil-fill"></i> Create </a>
+                    </div>
+				</div>
+
+				<div class="table-row">		
+					<div class="table-data">CarVarient</div>
+					<div class="table-data">{{form.carvarient}}</div>
+					<div class="table-data">
+						<a class="icon-data" href="{% url 'varient_creation' %}"><i class="bi bi-pencil-fill"></i> Create </a>
+					</div>
+				</div>
+
+				<div class="table-row">
+					<div class="table-data">Engine</div>
+					<div class="table-data">{{form.Engine}}</div>
+					<div class="table-data">
+                        <a class="icon-data" href="{% url 'engine_creation' %}"><i class="bi bi-pencil-fill"></i> Create </a>
+                    </div>
+				</div>
+
+				<div class="table-row">
+					<div class="table-data">Fuel</div>
+					<div class="table-data">{{form.fuel}}</div>
+					<div class="table-data">
+                        <a class="icon-data" href="{% url 'fuel_creation' %}"><i class="bi bi-pencil-fill"></i> Create </a>
+                    </div>
+				</div>
+
+				<div class="table-row">
+					<div class="table-data">Exterior</div>
+					<div class="table-data">{{form.exterior}}</div>
+					<div class="table-data">
+                        <a class="icon-data" href="{% url 'exterior_creation' %}"><i class="bi bi-pencil-fill"></i> Create </a>
+                    </div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Comfort</div>
+					<div class="table-data">{{form.comfort}}</div>
+					<div class="table-data"></div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Capacity</div>
+					<div class="table-data">{{form.capacity}}</div>
+					<div class="table-data"></div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Year</div>
+					<div class="table-data">{{form.year}}</div>
+					<div class="table-data"></div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Featured</div>
+					<div class="table-data">{{form.is_featured}}</div>
+					<div class="table-data"></div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Created_Date</div>
+					<div class="table-data">{{form.created_date}}</div>
+					<div class="table-data"></div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Image 1</div>
+					<div class="table-data">{{form.image1}}</div>
+					<div class="table-data"></div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Image 2</div>
+					<div class="table-data">{{form.image2}}</div>
+					<div class="table-data"></div>
+				</div>
+
+                <div class="table-row">
+					<div class="table-data">Image 3</div>
+					<div class="table-data">{{form.image3}}</div>
+					<div class="table-data"></div>
+				</div>
+
+				<input type="submit" id="submit" value="submit">
+			</div>
+		</div>
+	</div>
+</form>		
+		
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+  
+	{% include "../footer.html" %}
+
+</body>
+</html>

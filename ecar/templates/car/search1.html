@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  	<meta charset="UTF-8">
+  	<title></title>
+  	<link rel="stylesheet" href="{% static './assets/admin_table/dist/style.css' %}">
+	<!-- Add File -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+<body>
+
+	{% include "navbar.html" %}
+	
+
+<!-- partial:index.partial.html -->
+<h5><a href="{% url 'car_creation' %}" class="btn btn-primary">Create</a></h5>
+<div class="container">
+	
+	<div class="table">
+		<form id="form" method="get" action="/search1" >
+			<input type="search" id="query" name="query" placeholder="Search by name ..." style="background-color: #e6e6e6; border: 2px solid #008CBA;">
+			<button style=" background-color: #e6e6e6; color: black; border: 2px solid #008CBA;">Search</button>
+		  </form>
+		<div class="table-header">
+			<div class="header__item"><a id="CarType" class="filter__link" href="#">Car Type</a></div>
+			<div class="header__item"><a id="CarVarient" class="filter__link filter__link--number" href="#">Car Brand</a></div>
+			<div class="header__item"><a id="CarEngine" class="filter__link filter__link--number" href="#">Car Varient</a></div>
+			<div class="header__item"><a id="CarEngine" class="filter__link filter__link--number" href="#">image</a></div>
+			<div class="header__item"><a id="Action" class="filter__link filter__link--number" href="#">Action</a></div>
+		</div>
+
+		<!-- {% for cartype in cartypes %}
+
+		<div class="table-content">	
+			<div class="table-row">		
+				<div class="table-data">john</div>
+				<div class="table-data"></div>
+				<div class="table-data"></div>
+				<div class="table-data"></div>
+				<div class="table-data"></div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Dick</div>
+				<div class="table-data">1</div>
+				<div class="table-data">1</div>
+				<div class="table-data">2</div>
+				<div class="table-data">3</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Harry</div>
+				<div class="table-data">0</div>
+				<div class="table-data">2</div>
+				<div class="table-data">2</div>
+				<div class="table-data">2</div>
+			</div>
+		</div>
+		  
+		{% endfor %} -->
+		
+
+		<div class="table-content">	
+		{% for i in car_list %}
+			<div class="table-row">		
+				<div class="table-data">{{i.cartype}}</div>
+				<div class="table-data">{{i.brand}}</div> 
+				<div class="table-data">{{i.carvarient}}</div>
+				<div class="table-data">
+					<a href="{% url 'car_detail' i.id %}"><img class="img img:hover" src={{i.image1.url}} alt=""></a>
+				</div>
+				<div class="table-data">
+					<button type="button">
+						<a class="icon-data" href="{% url 'car_update' i.id %}"><i class="bi bi-pencil-fill"></i> Update </a>
+						<a class="icon-data" href="{% url 'car_delete' i.id %}"><i class="bi bi-trash"></i> Delete </a>
+						<a class="icon-data" href="{% url 'car_detail' i.id %}"><i class="bi bi-journal-text"></i> Detail </a>
+					</button>
+				</div>
+			</div>
+		{% endfor %} 
+		
+		</div>
+
+	</div>
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+	{% include "../footer.html" %}
+  
+</body>
+</html>

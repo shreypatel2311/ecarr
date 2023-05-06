@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel="stylesheet" href="{% static './assets/login/src/style.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static './assets/login/dist/style.css' %}"> {% endcomment %}
+   
+</head>
+<body>
+   
+         <!-- partial:index.partial.html -->        
+         <div class="container" id="container">
+            <div class="form-container sign-up-container">
+               <form method="POST" action="">
+                  {% csrf_token %}
+                  <h1>Create Account</h1>
+                  <div class="social-container">
+                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                  <span>or use your email for registration</span>
+                      <input type="text" id="username" name="username" placeholder="Enter username">
+                      <input type="email" id="email" name="email" placeholder="Enter Email">
+                      <input type="password" id="password" name="password" placeholder="Enter Password">
+                      <!-- <label><input type="checkbox" checked name="is_admin">is_admin</label>
+                      <label><input type="checkbox" checked name="is_user">is_admin</label> -->
+                      <label for="my-checkbox">Admin</label>
+                      <input type="checkbox" id="my-checkbox" name="my-checkbox" value="yes">
+                      <label for="my-checkbox">User</label>
+                      <input type="checkbox" id="my-checkbox" name="my-checkbox" value="yes">
+
+                      <button type="submit">Register</button>
+               </form>
+            </div>
+            <div class="form-container sign-in-container">
+               <form method ="post" action="">
+                  {% csrf_token %}
+
+                  <h1>Sign in</h1>
+                  <div class="social-container">
+                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                     <span>or use your account</span>
+
+                     <!-- <table> 
+                     <tr> 
+                        <td>{{ form.username.label_tag }}</td> 
+                        <td>{{ form.username }}</td> 
+                     </tr> 
+                     <tr>
+                        <td>{{ form.password.label_tag }}</td> 
+                     
+                        <td>{{ form.password }}</td> 
+                     </tr> 
+                     </table> -->
+
+                     <!-- <input type="text" placeholder="User name" />
+                     <input type="email" placeholder="Email" />
+                     <input type="password" placeholder="Password" />
+                     <a href="/user/home/">Forgot your password?</a> -->
+                     <!-- <button type="submit">Login</button> -->
+                  
+
+                     <!-- <div class="form-group">
+                  
+                        {{ form.username.label_tag }}
+                        <input type="email" placeholder="Email" />
+                        
+                      </div>
+                      <div class="form-group">
+                        {{ form.password.label_tag }}
+                        {{ form.password }}
+                      </div>
+                      <button type="submit">Login</button>  -->
+
+
+
+                      <input type="text" id="username" name="username" placeholder="Enter username">
+                      <input type="email" id="email" name="email" placeholder="Enter Email">
+                      <input type="password" id="password" name="password" placeholder="Enter Password">
+                      <a href="/user/home/">Forgot your password?</a>
+                      <button type="submit">Login</button>
+
+                  
+               </form>
+            </div>
+            <div class="overlay-container">
+               <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                     <h1>signUp</h1>
+                     <p>To keep connected with us please login with your personal info</p>
+                     <button class="ghost" id="signIn">Login</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                     <h1>Hello, Friend!</h1>
+                     <p>Enter your personal details and start journey with us</p>
+                     <button class="ghost" id="signUp">Register</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- <footer>
+            <p>
+               Created with <i class="fa fa-heart"></i> by
+               <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+               - Read how I created this and how you can join the challenge
+               <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+            </p>
+         </footer>  -->
+
+         <!-- partial -->
+         <script  src="{% static './assets/login/src/script.js'%}"></script>
+   
+</body>
+</html>

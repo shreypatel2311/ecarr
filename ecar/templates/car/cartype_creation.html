@@ -1,0 +1,80 @@
+<form method ="POST">
+    {% csrf_token %}
+ 
+    {{form.as_p}}
+    
+     <input type="submit" value="Submit">
+ </form>
+
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="{% static './assets/admin_table/dist/style.css' %}">
+
+</head>
+<body> {% endcomment %}
+{% comment %} partial:index.partial.html {% endcomment %}
+{% comment %} <p></p>
+<div class="container">
+	<div class="table">
+        <form method="post" action="">
+            {% csrf_token %}
+		<div class="table-header">
+			<div class="header__item"><a id="CarType" class="filter__link" href="#"></a>#</div>
+			<div class="header__item"><a id="CarVarient" class="filter__link filter__link--number" href="#">Car Varient</a></div>
+			<div class="header__item"><a id="CarEngine" class="filter__link filter__link--number" href="#">Car Type</a></div>
+			<div class="header__item"><a id="Status" class="filter__link filter__link--number" href="#">Brand</a></div>
+			<div class="header__item"><a id="Action" class="filter__link filter__link--number" href="#">Action</a></div>
+		</div> {% endcomment %}
+
+		<!-- {% for cartype in cartypes %}
+
+		<div class="table-content">	
+			<div class="table-row">		
+				<div class="table-data">john</div>
+				<div class="table-data"></div>
+				<div class="table-data"></div>
+				<div class="table-data"></div>
+				<div class="table-data"></div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Dick</div>
+				<div class="table-data">1</div>
+				<div class="table-data">1</div>
+				<div class="table-data">2</div>
+				<div class="table-data">3</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Harry</div>
+				<div class="table-data">0</div>
+				<div class="table-data">2</div>
+				<div class="table-data">2</div>
+				<div class="table-data">2</div>
+			</div>
+		</div>
+		  
+		{% endfor %} -->
+        
+		{% comment %} <div class="table-content">	
+		
+			<div class="table-row">		
+				<div class="table-data">#</div>
+				<div class="table-data">{{form.carvarient}}   <a href="/car/carvarient/create/">create</a> </div> 
+				<div class="table-data">{{form.cartype}}  <a href="/car/carengine/create/">create</a> </div>
+				<div class="table-data">{{form.brand}}  <a href="/car/carengine/create/">create</a> </div>
+				<div class="table-data"></div>
+			</div>
+			<button type="submit">submit</button>
+		</div>
+        </form>
+	</div>
+   
+</div>  {% endcomment %}
+<!-- partial -->
+   {% comment %} <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>  {% endcomment %}

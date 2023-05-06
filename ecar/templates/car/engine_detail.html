@@ -1,0 +1,84 @@
+{% comment %} {{engine_detail}}   {% endcomment %}
+{% comment %} {{cartype_detail.cartype}}
+{{cartype_detail.Engine.Torque}} 
+{{cartype_detail.Engine.NoOfCylinder}} {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="{% static './assets/admin_table/dist/style.css' %}">
+</head>
+<body>
+
+	{% include "navbar.html" %}
+	
+
+<!-- partial:index.partial.html -->
+{% comment %} <h5><a href="{% url 'car_creation' %}" class="btn btn-primary">Create</a></h5> {% endcomment %}
+<div class="container">
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a href="#">Engine Type</a></div>
+			<div class="header__item"><a href="#">Engine Displacement</a></div>
+			<div class="header__item"><a href="#">No Of Cylinder</a></div>
+			<div class="header__item"><a href="#">Max Power</a></div>
+			<div class="header__item"><a href="#">Torque</a></div>
+			<div class="header__item"><a href="#">Transmission Type</a></div>
+            <div class="header__item"><a href="#">Drive Type</a></div>
+			<div class="header__item"><a href="#">Clutch Type</a></div>
+		</div>
+
+		<div class="table-content">	
+		
+			<div class="table-row">		
+				<div class="table-data">{{cartype_detail.Engine.EngineType }}</div>
+				<div class="table-data">{{cartype_detail.Engine.EngineDisplacement}}</div> 
+				<div class="table-data">{{cartype_detail.Engine.NoOfCylinder}}</div>
+				<div class="table-data">{{cartype_detail.Engine.MaxPower}}</div>
+				<div class="table-data">{{cartype_detail.Engine.Torque}}</div>
+				<div class="table-data">{{cartype_detail.Engine.TransmissionType}}</div>
+				<div class="table-data">{{cartype_detail.Engine.DriveType}}</div>
+				<div class="table-data">{{cartype_detail.Engine.ClutchType}}</div>
+			</div>
+
+		
+		</div>
+
+	</div>
+
+</div>
+
+
+<!-- partial:index.partial.html -->
+{% comment %} <h5><a href="{% url 'car_creation' %}" class="btn btn-primary">Create</a></h5> {% endcomment %}
+<div class="container">
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a href="#">Fuel Type</a></div>
+			<div class="header__item"><a href="#">Tank Capacity</a></div>
+			<div class="header__item"><a href="#">Top Speed</a></div>
+			<div class="header__item"><a href="#">Mileage</a></div>
+		</div>
+
+		<div class="table-content">	
+
+			<div class="table-row">		
+				<div class="table-data">{{cartype_detail.Fuel.FuelType}}</div>
+				<div class="table-data"></div> 
+				<div class="table-data"></div>
+				<div class="table-data"></div>
+			</div>		
+		</div>
+
+	</div>
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+	{% include "../footer.html" %}
+  
+</body>
+</html>

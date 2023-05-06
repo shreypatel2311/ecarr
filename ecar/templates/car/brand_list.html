@@ -1,0 +1,8 @@
+{% for i in brand_list %}
+{{i.name}}
+{% if i.image %}
+  
+    <img src="{{i.image.url}}">
+    
+{% endif %}
+{% endfor %}

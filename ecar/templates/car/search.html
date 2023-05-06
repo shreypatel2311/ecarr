@@ -1,0 +1,25 @@
+<div class="search-box-3 sb-7 bg-active">
+    <div class="container">
+        <div class="search-area-inner">
+            <div class="search-contents">
+                <!-- <form method="" action=""> -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="model">
+                                    <option selected='selected' disabled='disabled'>Select Model</option>
+                                    {% for car in cars %}
+                                      <!-- <option value="{{model}}">{{model}}</option> -->
+                                    <option value="{{name}}">{car.name}}</option>
+
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+</div>

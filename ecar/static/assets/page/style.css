@@ -1,0 +1,254 @@
+/* *{
+margin: 0;
+padding: 0;
+}
+    
+    element.style {
+        font-family: auto;
+        font-size: 15px;
+    }
+    
+    #h1 {
+        display: block;
+        font-family: 'Poltawski Nowy';
+        height: 4vh;
+        margin: 30px 60px;
+    }
+
+    h3,h4 
+    .header-text{
+        font-family: 'Lato' !important;
+        font-size: 20px !important;
+        font-weight:lighter !important;
+            
+    }
+    p{
+        font-size: 50px;
+        color: black;
+    }
+    .content-text-1{
+        
+        margin: 50px 50px;
+
+    }
+
+    .content-text-p{
+        font-family: 'Poltawski Nowy';
+        font-size: 30px;
+    }
+
+    
+    .icon-data {
+
+        color:#000;
+        display: block;
+        padding: 6px 12px 6px 12px;
+        text-align:justify;
+        float:right;
+    }
+
+    .img-container{
+        display: flex;
+        margin: 40px 160px;
+        height: 45vh;
+        border: 1px inset #1c1e32;
+        border-radius: 3px;
+        align-items: flex-start;
+        background-color:aliceblue;
+    }
+
+    .content-text{ */
+
+        /* display: flexbox; */
+        /* align-items: flex-end;
+        text-align: center;
+        margin: 40px 85px;
+        border:3px inset #1c1e32;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 180px;
+        height: 8vh;
+    
+    }
+
+    .img {
+        display: flex;
+        width: auto;
+        height: 45vh;
+        padding: 1px;
+    }
+
+    ul {
+        display: block;
+        list-style-type: none;
+        margin: 50px 50px;
+        overflow: hidden;
+        border-style:outset;
+        background-color: #1c1e32;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: aliceblue;
+        font-weight:35px;      
+        font-size:18px; 
+    }
+
+   ul li {
+        float: left;
+        margin: 20px 20px;
+    } */
+
+    /* li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    } */
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    /* .active {
+    background-color: #04AA6D;
+    } */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@200&family=Poltawski+Nowy:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.my-h1{
+    margin: 15px 50px;
+    font-family:'Poltawski Nowy', serif;
+    box-shadow: 0 4px 10px 0 rgba(36,39,44,.15);
+
+}
+
+nav ul{
+    display: flex;
+    background-color: #1c1e32;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 20px 20px;
+}
+
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:lighter;
+}
+
+.my-img-outer-container{
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    box-shadow: 0 20px 20px 0 rgba(36,39,44,.15);
+}
+
+.my-img-inner-container{
+    max-height: 50vh;
+    max-width: 640px;
+}
+
+.my-img{
+    width: 640px;
+    height: 360px;
+}
+
+.my-ov-container{
+    /* margin: 0 100px;
+    height: 10vh;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    display: flex; */
+    height: 50vh;
+    margin: 40px 150px;
+    background-color:#1c1e32;
+    box-shadow: 0 40px 40px 0 rgba(36,39,44,.15);
+}
+
+.my-h3{
+    font-family:'Poltawski Nowy', serif;
+    font-size: 25px;
+    margin: 20px 40px;
+    padding: 20px;
+    color: white;
+}
+
+.my-tb{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.my-tb-tr{
+    width:300px;
+    height: 15vh;
+    border: 1px solid gray;
+}
+
+.my-tb-td-1{
+    font-size: 18px;
+    display: block;
+    margin: 10px 20px;
+}
+
+.my-tb-td-2{
+    font-size: 20px;
+    display: block;
+    margin: 10px 20px;
+    color: aliceblue;
+}
+
+.my-spec-container{
+    /* margin: 0 100px;
+    height: 10vh;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    display: flex; */
+    height: 80vh;
+    margin: 40px 50px;
+    background-color:white;
+    box-shadow: 0 20px 20px 0 rgba(36,39,44,.15);
+}
+
+.my-h4{
+    font-family:'Poltawski Nowy', serif;
+    font-size: 25px;
+    margin: 20px 40px;
+    padding: 20px;
+    color:#1c1e32;
+}
+
+.my-tb{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-spec-tb-tr{
+    width:600px;
+    height: 10vh;
+    margin: auto;
+    text-decoration: underline;
+    /* border: 1px solid gray; */
+}
+
+.my-spec-tb-td-1{
+    font-size: 17px;
+    float: left;
+}
+
+.my-spec-tb-td-2{
+    font-size: 17px;
+    float: right;
+}
+
+

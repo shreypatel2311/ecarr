@@ -1,0 +1,371 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+        display:block;
+        margin: 70px 70px;
+        }
+
+        .icon-data {
+
+        color:#000;
+        display: block;
+        padding: 6px 12px 6px 12px;
+        text-align:justify;
+        float:right;
+        }
+
+        .img {
+            display: flexbox;
+	        border: 1px solid #ddd;
+	        border-radius: 1px;
+            margin: 50px 50px ;
+	        padding: 10px 20px 10px 20px;
+	        width: 30%;
+        }
+
+        ul {
+        display: flexbox;
+        list-style-type: none;
+        margin: 50px 50px;
+        overflow: hidden;
+        background-color: #1c1e32;
+        color: aliceblue;
+        font-family: sans-serif;
+        font-size: medium;
+        font-weight: 300;
+        }
+
+        li {
+            display: block;
+        float: left;
+        margin:20px 25px 20px 25px;
+        padding: 10 50 10 50;
+        color: aliceblue;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+        background-color: #111;
+        }
+
+        .active {
+        background-color: #04AA6D;
+        }
+    </style>
+</head>
+<body> -->
+    
+        
+    <!-- <main>
+        <section>
+        <div>
+            <div>
+                <img  src="https://tpc.googlesyndication.com/simgad/12034953364635315369" border="0"padding=20% width="100%"  alt="">
+            </div>
+            <div>
+                <h1>{{car_detail.name}}</h1>
+            </div>
+            <div>
+                <ul>
+                    <li>OverView</li>
+                    <li>Key Specification</li>
+                    <li>Comfort</li>
+                    <li>Color</li>
+
+                </ul>
+            </div>
+            <div>
+                <span><img class="img" src="{{car_detail.image2.url}}" alt="">
+                    <div class="icon-data">Price</div>
+                </span>
+                    
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+</body>
+</html> -->
+ {% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- External CSS libraries -->
+	<!-- Log on to codeastro.com for more projects -->
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/animate.min.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/bootstrap-submenu.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/fonts/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/fonts/linearicons/style.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/jquery.mCustomScrollbar.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/dropzone.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/slick.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/lightbox.min.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static './assets/index/css/jnoty.css' %}">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static './assets/index/css/skins/red.css' %}">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{% static './assets/index/img/favicon.ico' %}" type="image/x-icon" >
+
+    <!-- Google fonts -->
+	<!-- Log on to codeastro.com for more projects -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static './assets/index/css/ie10-viewport-bug-workaround.css' %}">
+
+    <script  src="{% static './assets/index/js/ie-emulation-modes-warning.js' %}"></script>
+
+    <script src="{% static './assets/index/js/jquery-2.2.0.min.js' %}"></script>
+    <script src="{% static './assets/index/js/popper.min.js' %}"></script>
+    <script src="{% static './assets/index/js/bootstrap.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/bootstrap-submenu.js' %}"></script>
+    <script  src="{% static './assets/index/js/rangeslider.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.mb.YTPlayer.js' %}"></script>
+    <script  src="{% static './assets/index/js/bootstrap-select.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.easing.1.3.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.scrollUp.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/dropzone.js' %}"></script>
+    <script  src="{% static './assets/index/js/slick.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.filterizr.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.magnific-popup.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.countdown.js' %}"></script>
+    <script  src="{% static './assets/index/js/jquery.mousewheel.min.js' %}"></script>
+    <script  src="{% static './assets/index/js/lightgallery-all.js' %}"></script>
+    <script  src="{% static './assets/index/js/jnoty.js' %}"></script>
+    <script  src="{% static './assets/index/js/app.js' %}"></script>
+</head>
+<body>
+    <!-- Log on to codeastro.com for more projects -->
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>{{car_detail.name}}</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">{{car_detail.name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Car details page start -->
+<div class="car-details-page content-area-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-xs-12">
+                <div class="car-details-section">
+                    <!-- Heading start -->
+                    <div class="heading-car clearfix">
+                        <div class="pull-left">
+                            <h3>{{car_detail.name}}</h3>
+                            <h6>
+                                <!-- <i class="flaticon-pin"></i>{{single_car.state}}, {{single_car.city}} -->
+                            </h6>
+                        </div>
+                        <div class="pull-right">
+                            <h3><span>{{car_detail.price}} Lacs</span></h3>
+                        </div>
+                    </div>
+                    <div id="carDetailsSlider" class="carousel car-details-sliders slide mb-40">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item carousel-item" data-slide-number="0">
+                                <img src="{{car_detail.image1.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% if car_detail.image2 %}
+                            <div class="item carousel-item" data-slide-number="1">
+                                <img src="{{car_detail.image2.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% endif %}
+                            {% if car_detail.image3 %}
+                            <div class="item carousel-item" data-slide-number="2">
+                                <img src="{{car_detail.image3.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% endif %}
+                            <!-- {% if single_car.car_photo_3 %} -->
+                            <!-- <div class="item carousel-item" data-slide-number="4">
+                                <img src="{{single_car.car_photo_3.url}}" class="img-fluid" alt="slider-car">
+                            </div> -->
+                            <!-- {% endif %} -->
+                            <!-- {% if single_car.car_photo_4 %} -->
+                            <!-- <div class="item carousel-item" data-slide-number="5">
+                                <img src="{{single_car.car_photo_4.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% endif %} -->
+                        </div> 
+                        <!-- main slider carousel nav controls -->
+                        <div class="carousel-indicators-section clearfix">
+                            <ul class="carousel-indicators car-properties list-inline nav nav-justified">
+                                <li class="list-inline-item active">
+                                    <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carDetailsSlider">
+                                        <img src="{{car_detail.image1.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% if car_detail.image2 %}
+                                <li class="list-inline-item">
+                                    <a id="carousel-selector-1" data-slide-to="1" data-target="#carDetailsSlider">
+                                        <img src="{{car_detail.image2.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if car_detail.image3 %}
+                                <li class="list-inline-item">
+                                    <a id="carousel-selector-2" data-slide-to="2" data-target="#carDetailsSlider">
+                                        <img src="{{car_detail.image3.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %}
+                                <!-- {% if single_car.car_photo_3 %} -->
+                                <!-- <li class="list-inline-item">
+                                    <a id="carousel-selector-3" data-slide-to="3" data-target="#carDetailsSlider">
+                                        <img src="{{single_car.car_photo_3.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if single_car.car_photo_4 %}
+                                <li class="list-inline-item">
+                                    <a id="carousel-selector-4" data-slide-to="4" data-target="#carDetailsSlider">
+                                        <img src="{{single_car.car_photo_4.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %} -->
+                            </ul>
+                        </div>
+                    </div>
+					<!-- Log on to codeastro.com for more projects -->
+                    <!-- Tabbing box start -->
+                    <!-- <div class="tabbing tabbing-box mb-40">
+                        <ul class="nav nav-tabs" id="carTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="false">Vehicle overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">Features</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="carTabContent">
+                            <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
+                                <div class="car-description mb-50">
+                                    <h3 class="heading-2">
+                                        Description
+                                    </h3>
+                                    <p>
+                                      {{single_car.description | safe }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
+                                <div class="features-info mb-50">
+                                    <h3 class="heading-2">Features</h3>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <ul>
+                                                <li>
+                                                    {{single_car.features}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="sidebar-right">
+                    <!-- Advanced search start -->
+                    <div class="widget advanced-search d-none-992">
+                        <button class="btn btn-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Send a Message</button>
+
+                        <br>
+                        <h3 class="sidebar-title">Car Specs</h3>
+                        <ul>
+                            <li>
+                                <span><b>Varient</b> </span>{{car_detail.varient}}
+                            </li>
+                            <li>
+                                <span><b>Engine</b> </span>{{car_detail.Engine.EngineType}}
+                            </li>
+                            <!-- <li>
+                                <span><b>Year:</b> </span>{{single_car.year}}
+                            </li>
+                            <li>
+                                <span><b>Condition:</b> </span>{{single_car.condition}}
+                            </li>
+                            <li>
+                                <span><b>Body Style:</b> </span>{{single_car.body_style}}
+                            </li>
+                            <li>
+                                <span><b>Engine:</b> </span>{{single_car.engine}}
+                            </li>
+                            <li>
+                                <span><b>Transmission:</b> </span>{{single_car.transmission}}
+                            </li>
+                            <li>
+                                <span><b>Interior:</b> </span>{{single_car.interior}}
+                            </li>
+                            <li>
+                                <span><b>Miles:</b> </span>{{single_car.miles}} miles
+                            </li>
+                            <li>
+                                <span><b>Doors:</b> </span>{{single_car.doors}}
+                            </li>
+                            <li>
+                                <span><b>Passengers:</b> </span>{{single_car.passengers}}
+                            </li>
+                            <li>
+                                <span><b>VID No.:</b> </span>{{single_car.vin_no}}
+                            </li>
+                            <li>
+                                <span><b>Mileage:</b> </span>{{single_car.milage}}
+                            </li>
+
+                            <li>
+                                <span><b>Fuel Type:</b> </span>{{single_car.fuel_type}}
+                            </li>
+                            <li>
+                                <span><b>Owners:</b> </span>{{single_car.no_of_owners}}
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- Log on to codeastro.com for more projects -->
+<!-- Properties details page end -->
+                           
+</body>
+</html>
